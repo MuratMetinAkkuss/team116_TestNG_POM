@@ -14,7 +14,7 @@ public class C03_ConfigReader {
         //ConfigReader'daki properties objesi
         //yanlis yazilan Key'i bulamazsa null return eder.
 
-        
+
 
     }
 
