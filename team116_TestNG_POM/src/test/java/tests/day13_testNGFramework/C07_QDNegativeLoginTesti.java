@@ -39,7 +39,7 @@ public class C07_QDNegativeLoginTesti {
 
     }
     @Test (dependsOnMethods = "validUsernameWithInvalidPass")
-    public void invalidUsernameWithvalidPass(){
+    public void invalidUsernameWithValidPass(){
         Driver.getDriver().get(ConfigReader.getProperty("qdURL"));
         QualityDemyPage qualityDemyPage = new QualityDemyPage();
         qualityDemyPage.FirstloginButton.click();
@@ -57,7 +57,7 @@ public class C07_QDNegativeLoginTesti {
         // we can be sure that we couldn't pass the page so there is still emailBox on page
 
     }
-    @Test (dependsOnMethods = "invalidUsernameWithvalidPass")
+    @Test (dependsOnMethods = "invalidUsernameWithValidPass")
     public void invalidUsernameWithInvalidPass(){
         Driver.getDriver().get(ConfigReader.getProperty("qdURL"));
         QualityDemyPage qualityDemyPage = new QualityDemyPage();
