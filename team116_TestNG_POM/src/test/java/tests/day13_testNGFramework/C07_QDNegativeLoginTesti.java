@@ -21,14 +21,16 @@ public class C07_QDNegativeLoginTesti {
     // - gecersiz username, gecersiz password.
     //4- Login butonuna basarak login olun
     //5- Basarili olarak giris yapilamadigini test edin
-    @Test
+    @Test(groups = "smoke")
     public void validUsernameWithInvalidPass(){
         Driver.getDriver().get(ConfigReader.getProperty("qdURL"));
         QualityDemyPage qualityDemyPage = new QualityDemyPage();
         qualityDemyPage.FirstloginButton.click();
         qualityDemyPage.eMailBox.sendKeys(ConfigReader.getProperty("qdValidiUsername"));
         qualityDemyPage.passwordBox.sendKeys(ConfigReader.getProperty("qdInvalidPassword"));
-        qualityDemyPage.cookiesAcceptButton.click();
+        if (qualityDemyPage.cookiesAcceptButton.isDisplayed()) {
+            qualityDemyPage.cookiesAcceptButton.click();
+        }
         //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
         //wait.until(ExpectedConditions.elementToBeClickable(qualityDemyPage.secondLoginButton));
         ReusableMethods.stop(2);
@@ -38,7 +40,7 @@ public class C07_QDNegativeLoginTesti {
         // we can be sure that we couldn't pass the page so there is still emailBox on page
 
     }
-    @Test (dependsOnMethods = "validUsernameWithInvalidPass")
+    @Test(groups = "smoke")
     public void invalidUsernameWithValidPass(){
         Driver.getDriver().get(ConfigReader.getProperty("qdURL"));
         QualityDemyPage qualityDemyPage = new QualityDemyPage();
@@ -57,7 +59,7 @@ public class C07_QDNegativeLoginTesti {
         // we can be sure that we couldn't pass the page so there is still emailBox on page
 
     }
-    @Test (dependsOnMethods = "invalidUsernameWithValidPass")
+    @Test(groups = "smoke")
     public void invalidUsernameWithInvalidPass(){
         Driver.getDriver().get(ConfigReader.getProperty("qdURL"));
         QualityDemyPage qualityDemyPage = new QualityDemyPage();

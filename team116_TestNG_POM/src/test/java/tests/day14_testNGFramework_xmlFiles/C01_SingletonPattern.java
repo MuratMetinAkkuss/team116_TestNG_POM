@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C01_SingeltonPattern {
+public class C01_SingletonPattern {
 
     @Test
     public void test01(){
