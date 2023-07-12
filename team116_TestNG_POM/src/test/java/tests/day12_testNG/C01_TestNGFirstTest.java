@@ -22,7 +22,7 @@ public class C01_TestNGFirstTest {
          */
         Driver.getDriver().get("https://www.amazon.com");
 
-        ReusableMethods.stop(4);
+        ReusableMethods.bekle(4);
 
         Driver.closeDriver();
     }

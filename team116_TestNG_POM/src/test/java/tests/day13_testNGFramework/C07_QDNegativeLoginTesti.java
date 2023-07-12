@@ -33,7 +33,7 @@ public class C07_QDNegativeLoginTesti {
         }
         //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
         //wait.until(ExpectedConditions.elementToBeClickable(qualityDemyPage.secondLoginButton));
-        ReusableMethods.stop(2);
+        ReusableMethods.bekle(2);
         qualityDemyPage.secondLoginButton.click();
 
         Assert.assertTrue(qualityDemyPage.eMailBox.isDisplayed());
@@ -52,7 +52,7 @@ public class C07_QDNegativeLoginTesti {
         }
         //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
         //wait.until(ExpectedConditions.elementToBeClickable(qualityDemyPage.secondLoginButton));
-        ReusableMethods.stop(2);
+        ReusableMethods.bekle(2);
         qualityDemyPage.secondLoginButton.click();
 
         Assert.assertTrue(qualityDemyPage.eMailBox.isDisplayed());
@@ -71,7 +71,7 @@ public class C07_QDNegativeLoginTesti {
         }
         //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
         //wait.until(ExpectedConditions.elementToBeClickable(qualityDemyPage.secondLoginButton));
-        ReusableMethods.stop(2);
+        ReusableMethods.bekle(2);
         qualityDemyPage.secondLoginButton.click();
 
         Assert.assertTrue(qualityDemyPage.eMailBox.isDisplayed());

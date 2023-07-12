@@ -20,7 +20,7 @@ public class C06_QDLoginTest {
         qualityDemyPage.passwordBox.sendKeys(ConfigReader.getProperty("qdValidPassword"));
         // 5- Login butonuna basarak login olun
         qualityDemyPage.cookiesAcceptButton.click();
-        ReusableMethods.stop(3);
+        ReusableMethods.bekle(3);
         qualityDemyPage.secondLoginButton.click();
         // 6- Basarili olarak giris yapilabildigini test edin
     }
